@@ -4,7 +4,7 @@ from fastapi import FastAPI, Query
 app = FastAPI(
     title="Algop",
     description="Common Algorithms",
-    version="1.0",
+    version="1.0.1",
     contact={"url":"https://isahaji.com","name": "Isa Haji", "email": "isa@isahaji.com"}
 )
 
