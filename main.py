@@ -1,5 +1,5 @@
 from typing import List, Optional
-from algop import bubbleSort, insertionSort
+from algop import bubbleSort, insertionSort, twoNumberSum
 from fastapi import FastAPI, Query
 app = FastAPI(
     title="Algop",
@@ -22,3 +22,7 @@ async def bubblesort(q: Optional[List[str]] = Query(None)):
 @app.get('/insertion')
 async def insertionsort(q: Optional[List[str]] = Query(None)):
     return {"array": insertionSort(q)}
+
+@app.get('/twonumbersum')
+async def twonumbersum(q: Optional[List[int]] = Query(None), t: int = 0):
+    return {"answer":twoNumberSum(q,t)}
